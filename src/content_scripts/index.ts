@@ -7,7 +7,7 @@ import {
   writeOnContentEditableDiv,
 } from './utils';
 import { OpenAIEditResponeType, autoCompleteWithGPT } from './utils/openai';
-import defaultData, { storedType } from '../shared/defaults';
+import defaultData, { ShortcutName, storedType } from '../shared/defaults';
 
 const msgBoxSelector = "#main div[role='textbox']";
 const textSelector = "#app [data-lexical-text='true']";
@@ -88,7 +88,8 @@ function handleKeyDown(e: KeyboardEvent) {
 
   Object.keys(defaultData.shortcuts).forEach((action) => {
     const shortcut =
-      storedData?.shortcuts[action] || defaultData.shortcuts[action];
+      storedData?.shortcuts[action as ShortcutName] ||
+      defaultData.shortcuts[action as ShortcutName];
     if (
       e.key === shortcut.key &&
       e.altKey === shortcut.altKey &&
