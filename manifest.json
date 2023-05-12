@@ -10,5 +10,8 @@
       "matches": ["https://web.whatsapp.com/*"]
     }
   ],
+  "action": {
+    "default_popup": "dist/popup.html"
+  },
   "permissions": ["storage"]
 }
