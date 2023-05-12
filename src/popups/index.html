@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge" /> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="./styles/index.css" rel="stylesheet" />
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <div class="heading">
+        <h3>OpenAI API Key:</h3>
+        <button class="edit-button icon-btn" title="edit">
+          <i data-feather="edit"></i>
+        </button>
+      </div>
+      <div class="apikey">
+        <input class="invisible" type="text" value="" disabled />
+        <button class="reveal-button">reveal</button>
+        <div class="copy invisible">
+          <button class="copy-button icon-btn" title="copy">
+            <i data-feather="copy"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+    <section class="customize">
+      <h3>Customize</h3>
+      <form class="form">
+        <div class="form-group">
+          <label class="form-label" for="nSuggestion">Number of Suggestion:</label>
+          <input class="form-label" type="number" id="nSuggestion" />
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="temperature">Creativity Meter:</label>
+          <input class="form-label" id="temperature" type="range" step="0.2" min="0" max="2" />
+          <div class="temperature-labels">
+            <div>
+              <i data-feather="crosshair"></i><span>Deterministic</span>
+            </div>
+            <div><i data-feather="paperclip"></i><span>Creative</span></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" id="manual_complete" data-manual-enabled="false" checked />
+          <label for="manual_complete" class="form-label">Manually Suggest</label>
+        </div>
+      </form>
+    </section>
+    <section class="keybindings">
+      <h3>Keybindings</h3>
+      <div class="keybindings-group">
+        <div class="keybindings-title">Cycle Suggestion:</div>
+        <div class="keybindings-shorthands" data-shorthand-for="cycle">
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>.</kbd>
+        </div>
+      </div>
+      <div class="keybindings-group">
+        <div class="keybindings-title">Trigger Suggestion:</div>
+        <div class="keybindings-shorthands" data-shorthand-for="trigger">
+          <kbd>Alt</kbd>
+          <span>+</span>
+          <kbd>M</kbd>
+        </div>
+      </div>
+      <div class="keybindings-group">
+        <div class="keybindings-title">Accept Suggestion:</div>
+        <div class="keybindings-shorthands" data-shorthand-for="accept">
+          <kbd>Tab</kbd>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <button class="reset-button">reset</button>
+      <p class="message invisible"></p>
+      <button class="save-button">Save</button>
+    </footer>
+  </div>
+  <dialog class="modal">
+    <div class="modal-body">
+      <div class="modal-header">
+        <div class="modal-buttons">
+          <button class="modal-cancel">cancel</button>
+          <button class="modal-save" disabled>save</button>
+        </div>
+        <h2>Enter new Shortcut</h2>
+        <div class="keybindings-shorthand invisible"></div>
+        <button class="retry-button invisible">change keys</button>
+      </div>
+      <div class="keyboard-modal">
+        <img src="../../public/keys.png" alt="keys" />
+        <div class="modal-bottom">
+          <h3>Press <kbd>Esc</kbd> to cancel</h3>
+        </div>
+      </div>
+    </div>
+  </dialog>
+</body>
+
+</html>

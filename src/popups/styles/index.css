@@ -1,0 +1,289 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.container {
+  width: 20rem;
+  padding: 0.8rem 1.2rem;
+  color: #e2e8f0;
+  background: #020617;
+  background: linear-gradient(45deg, #020617 0%, #4a044e 0%, #3b0764 100%);
+}
+
+section {
+  padding: 1.2rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+section > h3 {
+  font-size: 1.4rem;
+  position: absolute;
+  top: 0;
+  left: 0.4rem;
+  transform: translateY(-50%);
+  color: #64748b;
+}
+
+.icon-btn {
+  padding: 0;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 0.6rem;
+}
+
+.heading > h3 {
+  color: #e2e8f0;
+  font-size: 1.4rem;
+}
+
+.edit-button {
+  color: #64748b;
+  background: none;
+}
+
+.edit-button > .feather-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.apikey {
+  padding: 0.4rem 0.8rem;
+  color: #020617;
+  background-color: #94a3b8;
+  position: relative;
+}
+
+.apikey > input {
+  width: 100%;
+  font-size: 0.8rem;
+  background: none;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.copy {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 0 0.2rem;
+}
+
+.copy:hover {
+  background: inherit;
+}
+
+.copy:hover > .copy-button {
+  visibility: visible;
+}
+
+.copy-button {
+  background: none;
+  color: #e2e8f0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.copy-button > .feather-icon {
+  filter: drop-shadow(0px 0px 5px white);
+}
+
+input:disabled {
+  color: #e2e8f0;
+}
+
+.apikey > button {
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #94a3b8;
+  background-color: #020617;
+  border-radius: 0.2rem;
+}
+
+.customize {
+  margin: 2rem 0;
+}
+
+.form-group {
+  margin: 0.6rem 0;
+}
+
+.form-group:first-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-label {
+  font-size: 1rem;
+  margin-right: 0.4rem;
+}
+
+.temperature-labels {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.4rem;
+}
+
+.temperature-labels > div {
+  display: flex;
+  align-items: center;
+}
+
+.temperature-labels .feather-icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.4rem;
+}
+
+#nSuggestion {
+  padding: 0.1rem 0.2rem;
+  width: 2.4rem;
+}
+
+#temperature {
+  display: block;
+  width: 100%;
+}
+
+.keybindings {
+  margin-bottom: 1.2rem;
+}
+
+.keybindings-group {
+  width: 100%;
+  margin: 0.6rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.keybindings-shorthands {
+  cursor: pointer;
+}
+
+kbd {
+  display: inline-block;
+  padding: 0.1em 0.4em;
+  font-size: 1em;
+  font-weight: bold;
+  line-height: 1.4;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+kbd > .feather-icon {
+  width: 1em;
+  height: 1em;
+  stroke-width: 4px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+footer > button {
+  background-color: #cbd5e1;
+  text-transform: uppercase;
+}
+
+dialog::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+dialog:modal {
+  width: 90%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+}
+
+.modal-body {
+  width: 100%;
+  position: relative;
+  background: #a7a7a7;
+  background: linear-gradient(to right, #a7a7a7 0%, #ffffff 100%);
+}
+
+.keyboard-modal {
+  width: 100%;
+  height: 100%;
+}
+
+.keyboard-modal > img {
+  width: 100%;
+}
+
+.modal-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.4rem 0.8rem;
+  text-align: center;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.modal-buttons > button,
+.retry-button {
+  text-transform: uppercase;
+  border-radius: 0.2rem;
+  background-color: #4a044e;
+  color: #e2e8f0;
+}
+
+.modal-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 2rem 0.8rem;
+}
+
+.keybindings-shorthand {
+  margin: 1.4rem 0;
+}
